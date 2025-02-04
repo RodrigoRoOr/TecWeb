@@ -52,7 +52,7 @@
         echo "$c, <br> <br>";
         echo '<h4>Respuesta:</h4>';  
         echo "El motivo del cual en el segundo bloque se escribe php server es porque el valor de b y c son apuntadores de a";
-        unset($a, $b, $c);
+        unset($a, $b, $c); //Borra las variables para que se puedan reciclar en un futuro
 
     ?>
     <h2>Ejercicio 3</h2>
@@ -66,7 +66,7 @@
         echo "$a, <br>";
         $z[] = &$a;
         print_r($z);
-        unset($z);
+        unset($z); //Se utiliza para desvincular las variables
         echo "<br>";
         $b = "5a version de PHP";
         echo "$b, <br>";
@@ -97,7 +97,7 @@
         
         print_r($GLOBALS['z']);
         echo "<br>";
-        unset($a, $b, $c, $z);
+        unset($a, $b, $c, $z);//Borra las variables para que se puedan reciclar en un futuro
     ?>
     <h2>Ejercicio 5</h2>
     <p>Dar el valor de las variables $a, $b, $c al final del siguiente script: </p>
@@ -107,11 +107,39 @@
         $b = (integer) $a;
         $a = "9E3";
         $c = (double) $a;
+        //Resultados a imprimir
         echo "$a <br>";
         echo "$b <br>"; 
         echo "$c <br>";
-        unset($a, $b, $c)
+        unset($a, $b, $c);//Borra las variables para que se puedan reciclar en un futuro
     ?>
 
+    <h2>Ejercicio 6</h2>
+    <p>Dar y comprobar el valor booleano de las variables $a, $b, $c, $d, $e y $f y muéstralas
+       usando la función var_dump. Después investiga una función de PHP que permita transformar el valor booleano de $c y $e
+       en uno que se pueda mostrar con un echo: 
+    </p>
+    <?php
+        //Asugnación de las variables
+        $a = "0";
+        $b = "TRUE";
+        $c = FALSE;
+        $d = ($a OR $b);
+        $e = ($a AND $c);
+        $f = ($a XOR $b);
+
+        echo "Valores utilizando var_dump: ";
+        var_dump($a, $b, $c, $d, $e, $f);
+        
+        echo"<br><br>";
+        echo "Valores utilizando echo: <br>";
+        echo "a: $a <br>";
+        echo "b: $b <br>"; 
+        echo "c: " . var_export($c, true) . "<br>";
+        echo "d: " . var_export($d, true) . "<br>";
+        echo "e: " . var_export($e, true) . "<br>";
+        echo "f: " . var_export($f, true) . "<br>";
+    
+    ?>
 </body>
 </html>
