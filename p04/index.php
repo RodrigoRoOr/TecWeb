@@ -62,6 +62,7 @@
     </p>
     <?php
         //Variables
+        echo '<h4>Respuesta:</h4>'; 
         $a = "PHP5";
         echo "$a, <br>";
         $z[] = &$a;
@@ -86,6 +87,7 @@
        la matriz $GLOBALS o del modificador global de PHP. </p>
     <?php
         //Variables globales
+        echo '<h4>Respuesta:</h4>'; 
         var_dump($GLOBALS['a']);
         echo "<br>";
         
@@ -108,6 +110,7 @@
         $a = "9E3";
         $c = (double) $a;
         //Resultados a imprimir
+        echo '<h4>Respuesta:</h4>'; 
         echo "$a <br>";
         echo "$b <br>"; 
         echo "$c <br>";
@@ -128,6 +131,7 @@
         $e = ($a AND $c);
         $f = ($a XOR $b);
 
+        echo '<h4>Respuesta:</h4>'; 
         echo "Valores utilizando var_dump: ";
         var_dump($a, $b, $c, $d, $e, $f);
         
@@ -139,6 +143,31 @@
         echo "d: " . var_export($d, true) . "<br>";
         echo "e: " . var_export($e, true) . "<br>";
         echo "f: " . var_export($f, true) . "<br>";
+
+    ?>
+
+    <h2>Ejercicio 7</h2>
+    <p>Usando la variable predefinida $_SERVER, determina lo siguiente: <br>
+        a. La versión de Apache y PHP, <br>
+        b. El nombre del sistema operativo (servidor),<br>
+        c. El idioma del navegador (cliente).
+    </p>
+    <?php
+    // a. Versión de Apache y PHP
+    $apache_version = $_SERVER['SERVER_SOFTWARE']; 
+    $php_version = phpversion(); 
+    
+    // b. Nombre del sistema operativo del servidor
+    $server_os = PHP_OS;
+    
+    // c. Idioma del navegador (cliente)
+    $browser_language = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+    
+    // Mostrar la información
+    echo '<h4>Respuesta:</h4>'; 
+    echo "Versión de Apache y PHP: $apache_version, $php_version <br>";
+    echo "Sistema operativo del servidor: $server_os <br>";
+    echo "Idioma del navegador: $browser_language <br>";
     
     ?>
 </body>
