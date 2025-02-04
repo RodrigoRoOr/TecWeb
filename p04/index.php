@@ -33,7 +33,29 @@
     <h2>Ejercicio 2</h2>
     <p>Proporcionar los valores de $a, $b, $c como sigue:</p>
     <?php
-        //Aqui van las variables    
+        //Aqui van las variables
+        $a= "ManejadorSQL";
+        $b= 'MySQL';
+        $c= &$a;
+        //Aqui se muestra el contenido de cada variable
+        echo '<ul>';
+        echo "<li>$a, <br></li>";
+        echo "<li>$b, <br></li>";
+        echo "<li>$c, <br></li>";
+        echo " <br>";
+        //Se van a agregar las siguientes asignaciones
+        $a= "Php server";
+        $b= &$a;
+        //Se vuelve a mostrar el contenido de cada uno
+        echo "<li>$a, <br></li>";
+        echo "<li>$b, <br></li>";
+        echo "<li>$c, <br> <br></li>";
+        echo '</ul>';
+        echo '<h4>Respuesta:</h4>';  
+        echo "El motivo del cual en el segundo bloque se escribe php server es porque el valor de b y c son apuntadores de a"
+    ?>
+
+    
 
 </body>
 </html>
