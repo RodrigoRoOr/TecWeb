@@ -54,8 +54,29 @@
         echo '<h4>Respuesta:</h4>';  
         echo "El motivo del cual en el segundo bloque se escribe php server es porque el valor de b y c son apuntadores de a"
     ?>
-
-    
-
+    <h2>Ejercicio 3</h2>
+    <p>Muestra el contenido de cada variable inmediatamente después de cada asignación,
+        verificar la evolución del tipo de estas variables (imprime todos los componentes de los
+        arreglo):
+    </p>
+    <?php
+        //Variables
+        $a = "PHP5";
+        echo "<li>$a, <br></li>";
+        $z[] = &$a;
+        foreach ($z as $z1){
+        echo "<li>$z1, <br></li>";}
+        $b = "5a version de PHP";
+        echo "<li>$b, <br></li>";
+        @$c = $b*10;
+        echo "<li>$c, <br></li>";
+        $a .= $b;
+        echo "<li>$a, <br></li>";
+        @$b *= $c;
+        echo "<li>$b, <br></li>";
+        $z[0] = "MySQL";
+        foreach ($z as $z1){
+        echo "<li>$z1, <br></li>";}
+    ?>
 </body>
 </html>
