@@ -99,6 +99,19 @@
         echo "<br>";
         unset($a, $b, $c, $z);
     ?>
+    <h2>Ejercicio 5</h2>
+    <p>Dar el valor de las variables $a, $b, $c al final del siguiente script: </p>
+   <?php
+        //Asignación de las variables
+        $a = "7 personas";
+        $b = (integer) $a;
+        $a = "9E3";
+        $c = (double) $a;
+        echo "$a <br>";
+        echo "$b <br>"; 
+        echo "$c <br>";
+        unset($a, $b, $c)
+    ?>
 
 </body>
 </html>
