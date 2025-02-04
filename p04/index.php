@@ -38,21 +38,22 @@
         $b= 'MySQL';
         $c= &$a;
         //Aqui se muestra el contenido de cada variable
-        echo '<ul>';
-        echo "<li>$a, <br></li>";
-        echo "<li>$b, <br></li>";
-        echo "<li>$c, <br></li>";
+
+        echo "$a, <br>";
+        echo "$b, <br>";
+        echo "$c, <br>";
         echo " <br>";
         //Se van a agregar las siguientes asignaciones
         $a= "Php server";
         $b= &$a;
         //Se vuelve a mostrar el contenido de cada uno
-        echo "<li>$a, <br></li>";
-        echo "<li>$b, <br></li>";
-        echo "<li>$c, <br> <br></li>";
-        echo '</ul>';
+        echo "$a, <br>";
+        echo "$b, <br>";
+        echo "$c, <br> <br>";
         echo '<h4>Respuesta:</h4>';  
-        echo "El motivo del cual en el segundo bloque se escribe php server es porque el valor de b y c son apuntadores de a"
+        echo "El motivo del cual en el segundo bloque se escribe php server es porque el valor de b y c son apuntadores de a";
+        unset($a, $b, $c);
+
     ?>
     <h2>Ejercicio 3</h2>
     <p>Muestra el contenido de cada variable inmediatamente después de cada asignación,
@@ -62,21 +63,42 @@
     <?php
         //Variables
         $a = "PHP5";
-        echo "<li>$a, <br></li>";
+        echo "$a, <br>";
         $z[] = &$a;
-        foreach ($z as $z1){
-        echo "<li>$z1, <br></li>";}
+        print_r($z);
+        unset($z);
+        echo "<br>";
         $b = "5a version de PHP";
-        echo "<li>$b, <br></li>";
+        echo "$b, <br>";
         @$c = $b*10;
-        echo "<li>$c, <br></li>";
+        echo "$c, <br>";
         $a .= $b;
-        echo "<li>$a, <br></li>";
+        echo "$a, <br>";
         @$b *= $c;
-        echo "<li>$b, <br></li>";
+        echo "$b, <br>";
         $z[0] = "MySQL";
-        foreach ($z as $z1){
-        echo "<li>$z1, <br></li>";}
+        print_r($z);
+        echo  "<br>";
+        
     ?>
+    <h2>Ejercicio 4</h2>
+    <p>Lee y muestra los valores de las variables del ejercicio anterior, pero ahora con la ayuda de
+       la matriz $GLOBALS o del modificador global de PHP. </p>
+    <?php
+        //Variables globales
+        var_dump($GLOBALS['a']);
+        echo "<br>";
+        
+        var_dump($GLOBALS['b']);
+        echo "<br>";
+        
+        var_dump($GLOBALS['c']);
+        echo "<br>";
+        
+        print_r($GLOBALS['z']);
+        echo "<br>";
+        unset($a, $b, $c, $z);
+    ?>
+
 </body>
 </html>
