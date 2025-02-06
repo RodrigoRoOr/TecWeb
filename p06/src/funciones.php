@@ -56,4 +56,15 @@ function encontrarMultiploDoWhile($n) {
         
         echo "El primer número entero obtenido utilizando Do while, pero que además sea múltiplo de '.$n.' es: '.$numAleatorio.'";
     }}
+//Ejercicio 4
+function ArregloLetras(){
+    $letras = array();
+    for ($i = 0; $i <= 25; $i++) {
+        $letras[97 + $i] = chr(97 + $i);
+    }
+    foreach($letras as $key => $value){
+        echo $key.' => '.$value.'<br>';
+    }
+}
 ?>
+
