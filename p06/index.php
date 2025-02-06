@@ -42,6 +42,25 @@
         }
             echo "</table>";
     ?>
+    <h2>Ejercicio 3</h2>
+    <p>Utiliza un ciclo while y Do while para encontrar el primer número entero obtenido aleatoriamente,
+        pero que además sea múltiplo de un número dado.</p>
+    <?php
+    require_once __DIR__ . '/src/funciones.php'; //Incluir al archivo
+        echo "<h3>Resultados:</h3>";
+        if(isset($_GET['n']))
+        {
+            encontrarMultiploWhile($_GET['n']);
+
+        }
+    ?>
+    <?php
+    require_once __DIR__ . '/src/funciones.php'; //Incluir al archivo
+        if(isset($_GET['n']))
+        {
+            encontrarMultiploDoWhile($_GET['n']);
+        }
+    ?>
 
     <h2>Ejemplo de POST</h2>
     <form action="http://localhost/tecweb/practica1/p06/index.php" method="post">
