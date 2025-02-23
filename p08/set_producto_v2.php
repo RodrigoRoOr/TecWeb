@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt_check->close();
 
     // Insertar el producto si no existe 
-    $stmt = $mysqli->prepare("INSERT INTO productos (nombre, marca, modelo, precio, detalles, unidades, eliminado) VALUES (?, ?, ?, ?, ?, ?, 0)");
+    $stmt = $mysqli->prepare("INSERT INTO productos (nombre, marca, modelo, precio, detalles, unidades, eliminado) VALUES (?, ?, ?, ?, ?, ?, ?)");
     $stmt->bind_param("sssdsd", $nombre, $marca, $modelo, $precio, $detalles, $unidades);
 
     if ($stmt->execute()) {
