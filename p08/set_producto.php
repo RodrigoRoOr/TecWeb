@@ -2,10 +2,11 @@
 $nombre = 'nombre_producto';
 $marca  = 'marca_producto';
 $modelo = 'modelo_producto';
-$precio = 1.0;
+$precio = 1.00;
 $detalles = 'detalles_producto';
 $unidades = 1;
 $imagen   = 'img/imagen.png';
+$eliminado = 0;
 
 /** SE CREA EL OBJETO DE CONEXION */
 @$link = new mysqli('localhost', 'root', 'password', 'marketzone');	
@@ -18,7 +19,7 @@ if ($link->connect_errno)
 }
 
 /** Crear una tabla que no devuelve un conjunto de resultados */
-$sql = "INSERT INTO productos VALUES (null, '{$nombre}', '{$marca}', '{$modelo}', {$precio}, '{$detalles}', {$unidades}, '{$imagen}')";
+$sql = "INSERT INTO productos VALUES (null, '{$nombre}', '{$marca}', '{$modelo}', {$precio}, '{$detalles}', {$unidades}, '{$imagen}',  '{$eliminado}')";
 if ( $link->query($sql) ) 
 {
     echo 'Producto insertado con ID: '.$link->insert_id;
