@@ -39,6 +39,9 @@ function listarProductos() {
                         <td>${producto.nombre}</td>
                         <td><ul>${descripcion}</ul></td>
                         <td>
+                            <button class="product-edit btn btn-warning">
+                                Modificar
+                            </button>
                             <button class="product-delete btn btn-danger">
                                 Eliminar
                             </button>
@@ -75,6 +78,9 @@ $("#search").on("keyup", function () {
                         <td>${producto.nombre}</td>
                         <td><ul>${descripcion}</ul></td>
                         <td>
+                            <button class="product-edit btn btn-warning">
+                                Modificar
+                            </button>
                             <button class="product-delete btn btn-danger">
                                 Eliminar
                             </button>
@@ -89,13 +95,54 @@ $("#search").on("keyup", function () {
     });
 });
 
-// Agregar producto
+// Cargar datos del producto en el formulario para modificar
+$(document).on("click", ".product-edit", function () {
+    const id = $(this).closest("tr").attr("productId");
+
+    $.ajax({
+        url: './backend/product-get.php',
+        type: 'GET',
+        data: { id: id },
+        dataType: 'json',
+        success: function (respuesta) {
+            if (respuesta.status === "success") {
+                const producto = respuesta.data;
+
+                // Llenar el formulario con los datos del producto
+                $("#name").val(producto.nombre);
+                $("#productId").val(producto.id); // Guardar el ID del producto en un campo oculto
+
+                // Crear el JSON para el textarea
+                const productoJSON = {
+                    precio: producto.precio,
+                    unidades: producto.unidades,
+                    modelo: producto.modelo,
+                    marca: producto.marca,
+                    detalles: producto.detalles,
+                    imagen: producto.imagen
+                };
+                $("#description").val(JSON.stringify(productoJSON, null, 2));
+
+                // Cambiar el texto del botón a "Guardar Cambios"
+                $("#product-form button").text("Guardar Cambios");
+            } else {
+                alert("Error: " + respuesta.message);
+            }
+        },
+        error: function (xhr, status, error) {
+            alert("Error al cargar el producto: " + error);
+        }
+    });
+});
+
+// Agregar o actualizar producto
 $("#product-form").on("submit", function (e) {
     e.preventDefault();
 
     // Obtener los valores del formulario
     const nombre = $("#name").val();
     const productoJsonString = $("#description").val();
+    const id = $("#productId").val(); // Obtener el ID del producto (si existe)
 
     // Validar que los campos no estén vacíos
     if (!nombre || !productoJsonString) {
@@ -115,31 +162,42 @@ $("#product-form").on("submit", function (e) {
     // Agregar el nombre al JSON
     finalJSON['nombre'] = nombre;
 
+    // Determinar si es una actualización o una creación
+    const url = id ? './backend/product-update.php' : './backend/product-add.php';
+    const method = id ? 'PUT' : 'POST';
+
+    // Agregar el ID al JSON si es una actualización
+    if (id) {
+        finalJSON['id'] = id;
+    }
+
     // Enviar la solicitud al backend
     $.ajax({
-        url: './backend/product-add.php',
-        type: 'POST',
+        url: url,
+        type: method,
         contentType: 'application/json',
         data: JSON.stringify(finalJSON),
         dataType: 'json',
         success: function (respuesta) {
             // Mostrar mensaje de éxito o error
             if (respuesta.status === "success") {
-                alert("Producto agregado exitosamente.");
-            } else if (respuesta.message === "El producto ya existe.") {
-                alert("El producto ya existe.");
+                alert(respuesta.message);
             } else {
-                alert("Error al agregar el producto: " + respuesta.message);
+                alert("Error: " + respuesta.message);
             }
 
             // Actualizar la lista de productos
             listarProductos();
+
+            // Limpiar el formulario
+            limpiarFormulario();
         },
         error: function (xhr, status, error) {
             alert("Error en la solicitud: " + error);
         }
     });
 });
+
 // Eliminar producto
 $(document).on("click", ".product-delete", function () {
     if (confirm("¿De verdad deseas eliminar el Producto?")) {
@@ -160,6 +218,14 @@ $(document).on("click", ".product-delete", function () {
         });
     }
 });
+
+// Limpiar el formulario
+function limpiarFormulario() {
+    $("#name").val("");
+    $("#description").val(JSON.stringify(baseJSON, null, 2)); // Restaurar el JSON base
+    $("#productId").val(""); // Limpiar el ID del producto
+    $("#product-form button").text("Agregar Producto"); // Restaurar el texto del botón
+}
 
 // Inicializar la página
 $(document).ready(init);
