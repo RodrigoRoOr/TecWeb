@@ -5,7 +5,7 @@
 abstract class DataBase {
     protected $conexion;
 
-    public function __construct($db, $user = 'root', $pass = '7*Vl*zwyPeGlNLTm') {
+    public function __construct($db, $user = 'root', $pass = 'password') {
         $this->conexion = new mysqli('localhost', $user, $pass, $db);
         
         if ($this->conexion->connect_error) {
@@ -14,3 +14,4 @@ abstract class DataBase {
     }
 }
 ?>
+
