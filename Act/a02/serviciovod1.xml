@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CatalogoVOD>
+    <cuenta>
+        <correo>usuario1@email.com</correo>
+        <perfiles>
+            <perfil>
+                <usuario>Rodrigo</usuario>
+                <idioma>Español</idioma>
+            </perfil>
+            <perfil>
+                <usuario>Nicole</usuario>
+                <idioma>Inglés</idioma>
+            </perfil>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero>
+                <nombre>Acción</nombre>
+                <titulo>
+                    <nombre>Mad Max: Fury Road</nombre>
+                    <duracion>120</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>John Wick</nombre>
+                    <duracion>101</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Gladiador</nombre>
+                    <duracion>155</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Terminator 2</nombre>
+                    <duracion>137</duracion>
+                </titulo>
+            </genero>
+            <genero>
+                <nombre>Ciencia Ficción</nombre>
+                <titulo>
+                    <nombre>Interestelar</nombre>
+                    <duracion>169</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Blade Runner 2049</nombre>
+                    <duracion>164</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Matrix</nombre>
+                    <duracion>136</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>El origen</nombre>
+                    <duracion>148</duracion>
+                </titulo>
+            </genero>
+        </peliculas>
+        <programas>
+            <genero>
+                <nombre>Drama</nombre>
+                <titulo>
+                    <nombre>Breaking Bad</nombre>
+                    <duracion>47</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Stranger Things</nombre>
+                    <duracion>50</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>The Crown</nombre>
+                    <duracion>58</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Dark</nombre>
+                    <duracion>55</duracion>
+                </titulo>
+            </genero>
+            <genero>
+                <nombre>Comedia</nombre>
+                <titulo>
+                    <nombre>The Office</nombre>
+                    <duracion>22</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Brooklyn Nine-Nine</nombre>
+                    <duracion>21</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Friends</nombre>
+                    <duracion>24</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>How I Met Your Mother</nombre>
+                    <duracion>25</duracion>
+                </titulo>
+            </genero>
+        </programas>
+    </contenido>
+</CatalogoVOD>
