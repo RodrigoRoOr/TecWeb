@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CatalogoVOD>
+    <cuenta correo="usuario1@email.com">
+        <perfiles>
+            <perfil usuario="Rodrigo" idioma="Español"/>
+            <perfil usuario="Nicole" idioma="Inglés"/>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero nombre="Acción">
+                <titulo nombre="Mad Max: Fury Road" duracion="120"/>
+                <titulo nombre="John Wick" duracion="101"/>
+                <titulo nombre="Gladiador" duracion="155"/>
+                <titulo nombre="Terminator 2" duracion="137"/>
+            </genero>
+            <genero nombre="Ciencia Ficción">
+                <titulo nombre="Interestelar" duracion="169"/>
+                <titulo nombre="Blade Runner 2049" duracion="164"/>
+                <titulo nombre="Matrix" duracion="136"/>
+                <titulo nombre="El origen" duracion="148"/>
+            </genero>
+        </peliculas>
+        <programas>
+            <genero nombre="Drama">
+                <titulo nombre="Breaking Bad" duracion="47"/>
+                <titulo nombre="Stranger Things" duracion="50"/>
+                <titulo nombre="The Crown" duracion="58"/>
+                <titulo nombre="Dark" duracion="55"/>
+            </genero>
+            <genero nombre="Comedia">
+                <titulo nombre="The Office" duracion="22"/>
+                <titulo nombre="Brooklyn Nine-Nine" duracion="21"/>
+                <titulo nombre="Friends" duracion="24"/>
+                <titulo nombre="How I Met Your Mother" duracion="25"/>
+            </genero>
+        </programas>
+    </contenido>
+</CatalogoVOD>
