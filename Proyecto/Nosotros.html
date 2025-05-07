@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - CyberTricks</title>
+    <link rel="stylesheet" href="estilos.css"> <link rel="stylesheet" href="Nosotros.css"> <script src="Nosotros.js" defer></script>
+    <script src="main.js" defer></script>
+</head>
+    <body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.jpg" alt="CyberTricksLogo">
+            CyberTricks
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Nosotros</a></li>
+                <li><a href="juegos.html">Juegos</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="nosotros-container">
+        <section class="hero-nosotros">
+            <h1>Un poco sobre nosotros</h1>
+            <p>Conoce a los apasionados desarrolladores detrás de CyberTricks.</p>
+        </section>
+
+        <section class="desarrolladores">
+            <h2>Nuestro equipo</h2>
+            <div class="desarrollador-card">
+                <div class="imagen-desarrollador">
+                    <img src="img/YOUR_IMAGE10.jpg" alt="Bernardo Palacios (Floppa)">
+                </div>
+                <div class="info-desarrollador">
+                    <h3>Bernardo Palacios (Floppa)</h3>
+                    <p>Hola mundo, soy Floppa, lo que significa que resuelvo problemas, no los causo. Mi experiencia se centra en el desarrollo full-stack, desde la concepción inicial hasta el despliegue final. Apasionado por la creación de experiencias de usuario intuitivas y eficientes. Siempre dispuesto a sumergirme en un nuevo desafío tecnológico. La recursión, para mí, es como un buen café: una y otra vez hasta la solución. ¿Un bug? Más bien, un "feature" en desarrollo. Por cierto, ¿ya mencioné que soy fan de los gatos grandes?</p>
+                </div>
+            </div>
+
+            <div class="desarrollador-card">
+                <div class="imagen-desarrollador">
+                    <img src="img/YOUR_IMAGE12.jpg" alt="Gerson González (Senn)">
+                </div>
+                <div class="info-desarrollador">
+                    <h3>Gerson González (Senn)</h3>
+                    <p>¡Quieres ser peruano! Bueno amigo te traigo la forma de ser peruano: PRIMERO TENER UN BUEN AMIGO QUE TE TRAIGA EL RICO Y SABROSO SEGUNDO TENER HAMBRE QUE TE ESCALEN LOS 12 CERROS TERCERO COLOR Y BUENO YA TIENES EL PERUANO ABSOLUTO PARA SER PERUANO SOLO TIENES QUE CONQUISTAR TU COLON.</p>
+                </div>
+            </div>
+
+            <div class="desarrollador-card">
+                <div class="imagen-desarrollador">
+                    <img src="img/YOUR_IMAGE11.jpg" alt="Rodrigo Robledo (Kiry)">
+                </div>
+                <div class="info-desarrollador">
+                    <h3>Rodrigo Robledo (Kiry)</h3>
+                    <p>Tenía sueño mucho miedo... </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacto">
+            <h2>Contáctanos</h2>
+            <form id="contactForm">
+                <div class="input-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre">
+                    <span class="validation-icon" id="nombre-validation"></span>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                    <span class="validation-icon" id="email-validation"></span>
+                </div>
+                <div class="input-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje"></textarea>
+                    <span class="validation-icon" id="mensaje-validation"></span>
+                </div>
+                <button type="submit" class="enviar-button" id="enviar-button" disabled>Enviar Mensaje</button>
+                <div class="success-message" id="success-message" style="display: none;">
+                    <i class="checkmark"></i> Mensaje enviado exitosamente
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <div class="footer">
+        <div class="footer-left">
+            <div class="logo">
+                <img src="img/logo.jpg" alt="CyberTricks Logo">
+                CyberTricks
+            </div>
+            <div class="copyright">
+                Todos los derechos reservados ©CyberTricks 2025
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="img/placeholder_facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="img/placeholder_linkedin.png" alt="LinkedIn"></a>
+                <a href="#"><img src="img/placeholder_youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="img/placeholder_instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="collaborators-title">
+                Colaboradores principales
+            </div>
+            <ul class="collaborators-list">
+                <li>Bernardo Palacios Caballero</li>
+                <li>Gerson Emmanuel Contreras González</li>
+                <li>Rodrigo Robledo Ordoñez</li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <ul class="navigation-list">
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="#">Juegos</a></li>
+                <li><a href="Noticias.html">Noticias</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

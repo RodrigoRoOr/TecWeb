@@ -1,0 +1,208 @@
+/* Styles for the login page */
+body {
+    font-family: sans-serif;
+    background: linear-gradient(90deg, #3a1c71, #d76d77, #ffaf7b);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+header {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 100px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: #0e0808;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00f2c3;
+}
+
+nav a.active {
+    font-weight: bold;
+}
+
+main.login-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+    color: #333;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #3b5998;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.input-group input[type="email"],
+.input-group input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.validation-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.validation-icon.valid {
+    background-image: url('img/checkmark.png'); /* Path to your green checkmark image */
+    background-size: cover;
+}
+
+.validation-icon.invalid {
+    background-image: url('img/cross.png'); /* Path to your red cross image */
+    background-size: cover;
+}
+
+.login-button {
+    background-color: #00f2c3;
+    color: #192f6a;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #00d4a9;
+}
+
+.login-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.forgot-password {
+    margin-top: 15px;
+    color: #777;
+}
+
+.forgot-password a {
+    color: #3b5998;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+    color: #eee;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-links li {
+    margin-left: 15px;
+}
+
+.footer-links a {
+    color: #eee;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #00f2c3;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-message .checkmark {
+    width: 20px;
+    height: 20px;
+    background-image: url('img/checkmark_green.png'); /* Path to your green checkmark image */
+    background-size: cover;
+    margin-right: 10px;
+}

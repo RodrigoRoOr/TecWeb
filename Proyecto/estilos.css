@@ -1,0 +1,365 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background: linear-gradient(90deg, #3a1c71, #d76d77, #ffaf7b);
+    color: #fff;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #ffffff;
+    color: #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 150px;
+ 
+    margin-right: 20px;
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00aaff;
+}
+
+.btn-login {
+    background-color: #00aaff;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #0088cc;
+}
+
+/* Sección principal - Hero */
+.hero {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(90deg, #3a1c71, #d76d77, #ffaf7b);
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.hero img {
+    max-width: 90%;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Sección de tendencias */
+.tendencias {
+    background: linear-gradient(90deg, #3a1c71, #d76d77, #ffaf7b);
+    padding: 60px 20px;
+}
+
+.tendencias h3 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #1e1e2f;
+    padding: 20px;
+    border-radius: 12px;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card h4 {
+    margin-top: 12px;
+}
+
+/* Estilos para la sección de aplicaciones sospechosas */
+.aplicaciones.destacada {
+    background: linear-gradient(90deg, #3a1c71, #d76d77, #ffaf7b); /* Un color de fondo suave para destacar */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.contenedor-aplicaciones {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.titulo-seccion {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #f2eeed; /* Un color llamativo para el título */
+}
+
+.titulo-seccion h3 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.icono-alerta {
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+.listado-aplicaciones {
+    margin-bottom: 20px;
+}
+
+.aplicacion-sospechosa {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.info-aplicacion h4 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.info-aplicacion p {
+    color: #555;
+    margin-bottom: 0;
+}
+
+.icono-peligro {
+    color: #d34a4a;
+    margin-right: 5px;
+}
+
+.imagen-malware {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.imagen-malware img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.accion-boton {
+    text-align: center;
+}
+
+.boton-informativo {
+    background-color: #2980b9; /* Un color azul atractivo para el botón */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-informativo:hover {
+    background-color: #3498db;
+}
+
+.icono-mas {
+    margin-right: 8px;
+}
+
+/* Comentarios */
+.comentarios {
+    padding: 60px 20px;
+background: linear-gradient(90deg, #3a1c71, #d76d77, #ffaf7b);
+    text-align: center;
+}
+
+.comentarios h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.comentarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.comentario-card {
+    background: #fff;
+    color: #222;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.comentario-card span {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Banner superior */
+.top-banner {
+    background: linear-gradient(90deg, #4c669f, #3b5998, #192f6a);
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.banner-text {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    flex: 1 1 300px;
+}
+
+.back-button {
+    background-color: #00f2c3;
+    color: #192f6a;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #00d4a9;
+}
+
+/* Footer */
+.footer {
+    background-color: #f9f9f9;
+    color: #555;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.footer > div {
+    flex: 1 1 250px;
+    margin-bottom: 20px;
+}
+
+.footer .logo img {
+    height: 120px;
+    margin-right: 0px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons img {
+    height: 20px;
+}
+
+.collaborators-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.collaborators-list,
+.navigation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.collaborators-list li,
+.navigation-list li {
+    margin-bottom: 8px;
+}
+
+.navigation-list a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.navigation-list a:hover {
+    color: #000;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .top-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-text {
+        margin-bottom: 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}

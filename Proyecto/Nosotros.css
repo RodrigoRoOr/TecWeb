@@ -1,0 +1,293 @@
+/* Estilos para la página de nosotros */
+body {
+    font-family: sans-serif;
+    background: linear-gradient(90deg, #3a1c71, #d76d77, #ffaf7b);
+    color: #fff;
+    margin: 0;
+    padding-top: 80px; /* Espacio para el header fijo */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 97.5%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 100px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00f2c3;
+}
+
+nav a.active {
+    font-weight: bold;
+}
+
+main.nosotros-container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.hero-nosotros {
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-nosotros h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-nosotros p {
+    font-size: 1.1em;
+    color: #eee;
+}
+
+.desarrolladores {
+    margin-bottom: 40px;
+}
+
+.desarrolladores h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.desarrollador-card {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.imagen-desarrollador {
+    width: 150px; /* Ancho fijo del contenedor */
+    height: 150px; /* Alto fijo del contenedor (igual al ancho para hacerlo circular) */
+    border-radius: 50%; /* Hace que el contenedor sea circular */
+    overflow: hidden; /* Recorta la imagen para que se ajuste al círculo */
+    margin-right: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    flex-shrink: 0; /* Evita que el contenedor de la imagen se encoja */
+}
+
+.imagen-desarrollador img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.info-desarrollador h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.info-desarrollador p {
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.contacto {
+    padding: 30px 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contacto h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contacto .input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #eee;
+}
+
+.contacto input[type="text"],
+.contacto input[type="email"],
+.contacto textarea {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 1em;
+}
+
+.contacto textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contacto .validation-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    vertical-align: middle;
+    margin-top: 5px; /* Align with input */
+}
+
+.contacto .validation-icon.valid {
+    background-image: url('img/checkmark.png'); /* Path to your green checkmark image */
+    background-size: cover;
+}
+
+.contacto .validation-icon.invalid {
+    background-image: url('img/cross.png'); /* Path to your red cross image */
+    background-size: cover;
+}
+
+.contacto .enviar-button {
+    background-color: #00f2c3;
+    color: #192f6a;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contacto .enviar-button:hover {
+    background-color: #00d4a9;
+}
+
+.contacto .enviar-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.contacto .success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 20px;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+}
+
+.contacto .success-message .checkmark {
+    width: 20px;
+    height: 20px;
+    background-image: url('img/checkmark_green.png'); /* Path to your green checkmark image */
+    background-size: cover;
+    margin-right: 10px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #eee;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-links li {
+    margin-left: 15px;
+}
+
+.footer-links a {
+    color: #eee;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #00f2c3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .desarrollador-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .imagen-desarrollador {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
