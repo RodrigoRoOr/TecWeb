@@ -1,0 +1,263 @@
+/* Estilos para la página de registro */
+
+body.register-body {
+    font-family: sans-serif;
+    background: linear-gradient(90deg, #3a1c71, #d76d77, #ffaf7b); /* El mismo fondo que el login */
+    color: #fff;
+    margin: 0;
+    padding-top: 80px; /* Espacio para el header fijo */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center; /* Centra el contenido horizontalmente en el body */
+    /* justify-content: center; /* Ya no centramos verticalmente el body para dejar espacio al header */
+}
+
+main.register-container {
+    display: flex;
+    justify-content: center; /* Centra el formulario horizontalmente */
+    align-items: flex-start; /* Alinea el formulario en la parte superior del contenedor main */
+    width: 100%;
+    flex-grow: 1;
+    padding-top: 30px; /* Agrega un espacio superior entre el header y el formulario */
+    padding-bottom: 30px;
+}
+
+.register-form {
+    background-color: #fff; /* Fondo blanco para el formulario */
+    padding: 30px;
+    border-radius: 8px;
+    width: 400px; /* Ancho del formulario, ajústalo según necesites */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra similar al login */
+    color: #333; /* Cambia el color del texto dentro del formulario para que sea legible sobre fondo blanco */
+}
+
+.register-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Color del título en blanco */
+}
+
+.register-form .input-group {
+    margin-bottom: 15px;
+}
+
+.register-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.register-form input[type="email"],
+.register-form input[type="password"],
+.register-form input[type="text"],
+.register-form input[type="date"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 1em;
+    transition: border-color 0.3s ease; /* Transición suave para el cambio de color del borde */
+}
+
+.register-form input.valid-input {
+    border-color: green;
+}
+
+.register-form input.invalid-input {
+    border-color: red;
+}
+
+.register-form .validation-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.register-form button.register-button {
+    background-color: #00f2c3;
+    color: #192f6a;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.register-form button.register-button:hover {
+    background-color: #00d4a9;
+}
+
+.register-form button.register-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.register-form p.login-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-form p.login-link a {
+    color: #00f2c3;
+    text-decoration: none;
+}
+
+.register-form p.login-link a:hover {
+    text-decoration: underline;
+}
+
+.register-form .success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-form .success-message .checkmark {
+    width: 20px;
+    height: 20px;
+    background-image: url('img/checkmark_green.png');
+    background-size: cover;
+    margin-right: 10px;
+}
+
+/* Estilos para el footer (si quieres que sea similar al login) */
+footer {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #eee;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-links li {
+    margin-left: 15px;
+}
+
+.footer-links a {
+    color: #eee;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #00f2c3;
+}
+
+/* Estilos para el modo oscuro de la página de registro */
+.dark-mode header {
+    background-color: #333;
+    color: #eee;
+}
+
+.dark-mode .register-form {
+    background-color: #252525;
+    color: #eee;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+nav.dark-mode a {
+    color: #fff;
+}
+
+main.register-container.dark-mode {
+    background: #121212;
+}
+
+.register-form.dark-mode {
+    background-color: #252525;
+    color: #eee;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.register-form.dark-mode h2 {
+    color: #fff;
+}
+
+.register-form.dark-mode label {
+    color: #eee;
+}
+
+.register-form.dark-mode input {
+    background-color: #333;
+    color: #eee;
+    border: 1px solid #555;
+}
+
+.register-form.dark-mode button.register-button {
+    background-color: #666;
+    color: #fff;
+}
+
+.register-form.dark-mode button.register-button:hover {
+    background-color: #777;
+}
+
+.register-form.dark-mode button.register-button:disabled {
+    background-color: #555;
+    color: #ccc;
+}
+
+.register-form.dark-mode p.login-link a {
+    color: #00b386;
+}
+
+.register-form.dark-mode p.login-link a:hover {
+    color: #00c292;
+}
+
+.register-form .success-message.dark-mode {
+    background-color: #202d23;
+    color: #a7c9a7;
+    border-color: #395a39;
+}
+
+.dark-mode .footer {
+    background-color: #333;
+    color: #eee;
+}
+
+/* Botón modo oscuro */
+#dark-mode-toggle {
+    background-color: #00f2c3;
+    color: #192f6a;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dark-mode #dark-mode-toggle {
+    background-color: #666;
+    color: #fff;
+}

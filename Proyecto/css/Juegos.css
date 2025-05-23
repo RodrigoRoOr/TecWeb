@@ -1,0 +1,226 @@
+/* Estilos para la página de videojuegos (Header) */
+body {
+    font-family: sans-serif;
+    background: linear-gradient(90deg, #3a1c71, #d76d77, #ffaf7b);
+    color: #fff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Añadida transición */
+}
+
+header {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    padding: 20px;
+    position: static;
+    top: 0;
+    left: 0;
+    width: 97.5%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Añadida transición */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 100px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00f2c3;
+}
+
+nav a.active {
+    font-weight: bold;
+}
+
+/* Estilo de la pagina de los juegos (Body) */
+.juegos-container {
+    padding: 20px;
+    background: linear-gradient(90deg, #3a1c71, #d76d77, #ffaf7b);
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Añadida transición */
+}
+
+.juegos-header {
+    text-align: left;
+    margin-bottom: 30px;
+    padding-left: 10px;
+    transition: color 0.3s ease; /* Añadida transición */
+}
+
+.juegos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+}
+
+.juego-card {
+    background: linear-gradient(to bottom, #2c3e50, #1c2a38);
+    border-radius: 10px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Añadida transición */
+}
+
+.juego-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3); /* Ajuste de sombra */
+}
+
+.juego-info {
+    padding: 20px;
+}
+
+.juego-info h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    transition: color 0.3s ease; /* Añadida transición */
+}
+
+.juego-info p {
+    font-size: 1em;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    transition: color 0.3s ease; /* Añadida transición */
+}
+
+.juego-botones {
+    display: flex;
+    gap: 10px;
+}
+
+.jugar-boton,
+.saber-mas-boton {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+.jugar-boton:hover {
+    background-color: #2980b9;
+}
+
+.saber-mas-boton {
+    background-color: #2ecc71;
+}
+
+.saber-mas-boton:hover {
+    background-color: #27ae60;
+}
+
+.juego-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0 10px 10px 0;
+}
+
+/* Estilos para el modo oscuro  */
+body.dark-mode {
+    background: #121212;
+    color: #eee;
+}
+
+header.dark-mode {
+    background-color: #333;
+    color: #eee;
+}
+
+nav.dark-mode a {
+    color: #fff;
+}
+
+.juegos-container.dark-mode {
+    background: #121212;
+    color: #eee;
+}
+
+.juegos-header.dark-mode {
+    color: #fff;
+}
+
+.juego-card.dark-mode {
+    background: linear-gradient(to bottom, #333, #555);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.juego-card.dark-mode:hover {
+    box-shadow: 0 7px 20px rgba(255, 255, 255, 0.2); /* Ajuste de sombra */
+}
+
+.juego-info.dark-mode h2,
+.juego-info.dark-mode p {
+    color: #eee;
+}
+/* Estilos para el modo oscuro del footer  */
+.footer.dark-mode {
+    background-color: #333;  /* O el color que prefieras  */
+    color: #eee;
+}
+
+.footer.dark-mode a {
+    color: #fff;  /* Color de los enlaces en el footer  */
+}
+
+.footer.dark-mode .collaborators-title {
+    color: #eee;  /* Color del título de los colaboradores  */
+}
+
+#dark-mode-toggle {
+    background: none;  /* Sin fondo */
+    border: 1px solid currentColor; /* Borde del color del texto */
+    color: inherit; /* Hereda el color del texto del padre */
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: opacity 0.3s ease; /* Transición para la opacidad */
+}
+
+#dark-mode-toggle:hover {
+    opacity: 0.7; /* Ligeramente transparente al pasar el ratón */
+}
+
+#dark-mode-toggle.dark-mode {
+    /* No necesitamos cambiar mucho en modo oscuro, 
+        ya que 'inherit' y 'currentColor' se adaptan */
+}

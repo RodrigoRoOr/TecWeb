@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse - CyberTricks</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/Registro.css">
+    <script src="js/Registro.js" defer></script>
+    <link rel="stylesheet" href="css/Juegos.css">
+</head>
+<body>
+   <header>
+        <div class="logo">
+            <img src="img/logo2.png" alt="CyberTricks Logo">
+            CyberTricks
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="Juegos.html">Juegos</a></li>
+                <li><a href="Noticias.html">Noticias</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <button id="dark-mode-toggle">Cambiar tema</button> 
+    </header>
+
+    <main class="register-container">
+        <form class="register-form">
+            <h2>Registrarse</h2>
+            <div class="input-group">
+                <label for="register-email">Correo</label>
+                <input type="email" id="register-email" name="correo">
+                <span class="validation-icon" id="register-email-validation"></span>
+            </div>
+            <div class="input-group">
+                <label for="register-password">Contraseña</label>
+                <input type="password" id="register-password" name="contrasena">
+                <span class="validation-icon" id="register-password-validation"></span>
+            </div>
+            <div class="input-group">
+                <label for="register-nombre">Nombre</label>
+                <input type="text" id="register-nombre" name="nombre">
+                <span class="validation-icon" id="register-nombre-validation"></span>
+            </div>
+            <div class="input-group">
+                <label for="register-apellido">Apellido</label>
+                <input type="text" id="register-apellido" name="apellido">
+                <span class="validation-icon" id="register-apellido-validation"></span>
+            </div>
+            <div class="input-group">
+                <label for="register-fecha-nacimiento">Fecha de Nacimiento</label>
+                <input type="date" id="register-fecha-nacimiento" name="fecha">
+                <span class="validation-icon" id="register-fecha-nacimiento-validation"></span>
+            </div>
+            <button type="submit" class="register-button" id="register-button" disabled>Registrarse</button>
+            <p class="login-link"><a href="login.html">¿Ya tienes una cuenta? Inicia sesión</a></p>
+            <div class="success-message" id="register-success-message" style="display: none;">
+                <i class="checkmark"></i> Registro exitoso
+            </div>
+        </form>
+    </main>
+
+     <div class="footer">
+        <div class="footer-left">
+            <div class="logo">
+                <img src="img/logo2.png" alt="CyberTricks Logo">
+                CyberTricks
+            </div>
+            <div class="copyright">
+                Todos los derechos reservados ©CyberTricks 2025
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="img/placeholder_facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="img/placeholder_linkedin.png" alt="LinkedIn"></a>
+                <a href="#"><img src="img/placeholder_youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="img/placeholder_instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="collaborators-title">
+                Colaboradores principales
+            </div>
+            <ul class="collaborators-list">
+                <li>Bernardo Palacios Caballero</li>
+                <li>Gerson Emmanuel Contreras González</li>
+                <li>Rodrigo Robledo Ordoñez</li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <ul class="navigation-list">
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="Juegos.html">Juegos</a></li>
+                <li><a href="Noticias.html">Noticias</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

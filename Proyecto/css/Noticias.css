@@ -4,17 +4,16 @@ body {
     background: linear-gradient(90deg, #3a1c71, #d76d77, #ffaf7b);
     color: #fff;
     margin: 0;
-    padding-top: 80px; /* Espacio para el header fijo */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 header {
-    background-color: rgb(255, 255, 255,);
+    background-color: rgb(255, 255, 255);
     color: #000000;
     padding: 20px;
-    position: fixed;
+    position:static;
     top: 0;
     left: 0;
     width: 97.5%;
@@ -261,4 +260,65 @@ footer {
         height: auto;
         border-radius: 5px 5px 0 0;
     }
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode {
+    background: #121212;
+    color: #eee;
+}
+
+header.dark-mode {
+    background-color: #333;
+    color: #eee;
+}
+
+nav.dark-mode a {
+    color: #fff;
+}
+
+.noticias-container.dark-mode {
+    background: #121212;
+    color: #eee;
+}
+
+.hero-noticias.dark-mode {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+.noticias-destacadas.dark-mode {
+    color: #fff;
+}
+
+.grid-noticias.dark-mode {
+    /* No es necesario cambiar el grid a menos que quieras un estilo diferente */
+}
+
+.noticia-card.dark-mode {
+    background-color: #252525;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.noticia-card.dark-mode h3,
+.noticia-card.dark-mode p {
+    color: #d4d4d4;
+}
+
+.noticia-item.dark-mode {
+    border-bottom: 1px solid #444;
+}
+
+.noticia-item.dark-mode .contenido-noticia h3,
+.noticia-item.dark-mode .contenido-noticia p {
+    color: #ccc;
+}
+
+footer.dark-mode {
+    background-color: #333;
+    color: #eee;
+}
+
+footer.dark-mode a {
+    color: #fff;
 }

@@ -206,3 +206,64 @@ footer {
     background-size: cover;
     margin-right: 10px;
 }
+
+/* Estilos para el modo oscuro  */
+body.dark-mode {
+    background: #121212;
+    color: #eee;
+}
+
+header.dark-mode {
+    background-color: #333;
+    color: #eee;
+}
+
+nav.dark-mode a {
+    color: #fff;
+}
+
+#main-login.dark-mode {  /* Usando el ID para más especificidad  */
+    background-color: #1a1a1a; /* O el color que prefieras  */
+}
+
+.login-form.dark-mode {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.input-group.dark-mode label {
+    color: #ddd;
+}
+
+.input-group.dark-mode input {
+    background-color: #444;
+    color: #eee;
+    border: 1px solid #555;
+}
+
+.login-button.dark-mode {
+    background-color: #555;
+    color: #fff;
+}
+
+.login-button.dark-mode:hover {
+    background-color: #777;
+}
+
+.forgot-password.dark-mode {
+    color: #ccc;
+}
+
+.forgot-password.dark-mode a {
+    color: #89cff0;  /* Un azul más claro  */
+}
+
+footer.dark-mode {
+    background-color: #333;
+    color: #eee;
+}
+
+footer.dark-mode a {
+    color: #fff;
+}

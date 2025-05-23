@@ -4,7 +4,6 @@ body {
     background: linear-gradient(90deg, #3a1c71, #d76d77, #ffaf7b);
     color: #fff;
     margin: 0;
-    padding-top: 80px; /* Espacio para el header fijo */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -14,7 +13,7 @@ header {
     background-color: rgb(255, 255, 255);
     color: #000000;
     padding: 20px;
-    position: fixed;
+    position:static;
     top: 0;
     left: 0;
     width: 97.5%;
@@ -290,4 +289,73 @@ footer {
         margin-right: 0;
         margin-bottom: 15px;
     }
+}
+
+/* Estilos para el modo oscuro en Nosotros */
+body.dark-mode {
+    background: #121212;
+    color: #eee;
+}
+
+header.dark-mode {
+    background-color: #333;
+    color: #eee;
+}
+
+nav.dark-mode a {
+    color: #fff;
+}
+
+#main-nosotros.dark-mode {
+    background-color: #1a1a1a; /* O el color que prefieras */
+}
+
+.hero-nosotros.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.mision-vision.dark-mode {
+    background-color: #222;
+    color: #ddd;
+}
+
+.equipo.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.equipo-miembro.dark-mode {
+    background-color: #444;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contacto.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+.contacto input,
+.contacto textarea {
+    background-color: #444;
+    color: #eee;
+    border: 1px solid #555;
+}
+
+.contacto button {
+    background-color: #555;
+    color: #fff;
+}
+
+.contacto button:hover {
+    background-color: #777;
+}
+
+footer.dark-mode {
+    background-color: #333;
+    color: #eee;
+}
+
+footer.dark-mode a {
+    color: #fff;
 }

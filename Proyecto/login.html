@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión - CyberTricks</title>
-    <link rel="stylesheet" href="estilos.css"> <link rel="stylesheet" href="login.css"> <script src="login.js" defer></script> </head>
+    <link rel="stylesheet" href="css/estilos.css"> <link rel="stylesheet" href="css/login.css"> <script src="js/login.js" defer></script> </head>
+    <link rel="stylesheet" href="css/Juegos.css">
+    <script src="js/Login_Oscuro.js" defer></script>
+
 <body>
     <header>
         <div class="logo">
-            <img src="img/logo.jpg" alt="CyberTricks Logo">
+            <img src="img/logo2.png" alt="CyberTricks Logo">
             CyberTricks
         </div>
         <nav>
             <ul>
                 <li><a href="Nosotros.html">Nosotros</a></li>
-                <li><a href="#">Juegos</a></li>
+                <li><a href="Juegos.html">Juegos</a></li>
                 <li><a href="Noticias.html">Noticias</a></li>
                 <li><a href="#" class="active">Login</a></li>
             </ul>
         </nav>
+        <button id="dark-mode-toggle">Cambiar tema</button>  </header>
     </header>
 
     <main class="login-container">
@@ -26,16 +30,17 @@
             <h2>Iniciar Sesión</h2>
             <div class="input-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="correo">
                 <span class="validation-icon" id="email-validation"></span>
             </div>
             <div class="input-group">
                 <label for="password">Contraseña</label>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="contrasena">
                 <span class="validation-icon" id="password-validation"></span>
             </div>
             <button type="submit" class="login-button" id="login-button" disabled>Iniciar Sesión</button>
             <p class="forgot-password"><a href="#">¿Olvidaste tu contraseña?</a></p>
+            <p class="register-link"><a href="Registro.html">Registrarse</a></p>
             <div class="success-message" id="success-message" style="display: none;">
                 <i class="checkmark"></i> Inicio de sesión exitoso
             </div>
@@ -45,7 +50,7 @@
     <div class="footer">
         <div class="footer-left">
             <div class="logo">
-                <img src="img/logo.jpg" alt="CyberTricks Logo">
+                <img src="img/logo2.png" alt="CyberTricks Logo">
                 CyberTricks
             </div>
             <div class="copyright">
@@ -71,7 +76,7 @@
         <div class="footer-right">
             <ul class="navigation-list">
                 <li><a href="Nosotros.html">Nosotros</a></li>
-                <li><a href="#">Juegos</a></li>
+                <li><a href="Juegos.html">Juegos</a></li>
                 <li><a href="Noticias.html">Noticias</a></li>
             </ul>
         </div>
